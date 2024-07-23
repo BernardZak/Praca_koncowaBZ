@@ -28,24 +28,22 @@ public class productPage {
     WebElement proceedToCheckoutButton;
 
 
-
-
-    public void selectSize(String size){
+    public void selectSize(String size) {
         dropdown.click();
-        WebElement sizePage = driver.findElement(By.cssSelector("option[title='"+size+"']"));
+        WebElement sizePage = driver.findElement(By.cssSelector("option[title='" + size + "']"));
         sizePage.click();
     }
 
-    public void selectQuantity(String selectedQuantity){
+    public void selectQuantity(String selectedQuantity) {
         number.clear();
         number.sendKeys(selectedQuantity);
     }
 
-    public void addToCart(){
+    public void addToCart() {
         addToCartButton.click();
     }
 
-    public void proceedToCheckout(){
+    public void proceedToCheckout() {
         proceedToCheckoutButton.click();
     }
 }
